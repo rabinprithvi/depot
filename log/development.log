@@ -306,3 +306,17 @@ Processing StoreController#index (for 127.0.0.1 at 2012-09-15 12:28:38) [GET]
   [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
 Rendering store/index
 Completed in 26ms (View: 22, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-15 12:39:41) [GET]
+  [4;36;1mProduct Load (1.1ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 56ms (View: 50, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-15 12:44:19) [GET]
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/store]

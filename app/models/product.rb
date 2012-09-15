@@ -8,7 +8,7 @@
 #---
 class Product < ActiveRecord::Base
 
-  def self.find_product_for_sale
+  def self.find_products_for_sale
     find(:all, :order => "title")
   end
 

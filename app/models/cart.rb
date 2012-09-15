@@ -6,27 +6,15 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
 #---
-class StoreController < ApplicationController
-  def index
-    @products = Product.find_products_for_sale
-  end
-
-
+class Cart
+  attr_reader :items   
   
-  def add_to_cart
-    product = Product.find(params[:id]) 
-    @cart = find_cart                   
-    @cart.add_product(product)          
+  def initialize
+    @items = []
   end
   
-
-
-private
-
-  def find_cart
-    session[:cart] ||= Cart.new
+  def add_product(product)
+    @items << product
   end
-
-
 end
 

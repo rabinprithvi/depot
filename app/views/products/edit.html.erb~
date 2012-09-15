@@ -15,18 +15,10 @@
     <%= f.label :image_url %><br />
     <%= f.text_field :image_url %>
   </p>
-  <!-- START_HIGHLIGHT -->
   <p>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </p>
-  <!-- END_HIGHLIGHT -->
-
-  <p>
-    <%= f.submit "Update" %>
+    <%= f.submit 'Update' %>
   </p>
 <% end %>
 
 <%= link_to 'Show', @product %> |
 <%= link_to 'Back', products_path %>
-

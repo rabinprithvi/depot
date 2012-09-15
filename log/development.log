@@ -320,3 +320,10 @@ Processing StoreController#index (for 127.0.0.1 at 2012-09-15 12:44:19) [GET]
 Rendering template within layouts/store
 Rendering store/index
 Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-15 12:48:12) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/store]

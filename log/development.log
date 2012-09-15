@@ -202,3 +202,107 @@ Processing ProductsController#show (for 127.0.0.1 at 2012-09-15 07:34:51) [GET]
 Rendering template within layouts/products
 Rendering products/show
 Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/products/3]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20120914232736)
+Migrating to AddPriceToProduct (20120915013155)
+Migrating to AddTestData (20120915034738)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mProduct Delete all (0.4ms)[0m   [0mDELETE FROM "products" WHERE 1=1[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Create (0.2ms)[0m   [0mINSERT INTO "products" ("price", "image_url", "updated_at", "description", "title", "created_at") VALUES(29.95, '/images/auto.jpg', '2012-09-15 03:55:29', '<p>
+ <em>Pragmatic Project Automation</em> shows you how to improve the 
+ consistency and repeatability of your project''s procedures using 
+ automation to reduce risk and errors.
+ </p>
+ <p>
+ Simply put, we''re going to put this thing called a computer to work 
+ for you doing the mundane (but important) project stuff. That means 
+ you''ll have more time and energy to do the really 
+ exciting---and difficult---stuff, like writing quality code.
+ </p>', 'Pragmatic Project Automation', '2012-09-15 03:55:29')[0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Version Control') LIMIT 1[0m
+  [4;35;1mProduct Create (0.2ms)[0m   [0mINSERT INTO "products" ("price", "image_url", "updated_at", "description", "title", "created_at") VALUES(28.5, '/images/svn.jpg', '2012-09-15 03:55:29', '<p>
+ This book is a recipe-based approach to using Subversion that will 
+ get you up and running quickly---and correctly. All projects need
+ version control: it''s a foundational piece of any project''s 
+ infrastructure. Yet half of all project teams in the U.S. don''t use
+ any version control at all. Many others don''t use it well, and end 
+ up experiencing time-consuming problems.
+ </p>', 'Pragmatic Version Control', '2012-09-15 03:55:29')[0m
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Unit Testing (C#)') LIMIT 1[0m
+  [4;35;1mProduct Create (0.2ms)[0m   [0mINSERT INTO "products" ("price", "image_url", "updated_at", "description", "title", "created_at") VALUES(27.75, '/images/utc.jpg', '2012-09-15 03:55:29', '<p>
+ Pragmatic programmers use feedback to drive their development and 
+ personal processes. The most valuable feedback you can get while 
+ coding comes from unit testing.
+ </p>
+ <p>
+ Without good tests in place, coding can become a frustrating game of 
+ "whack-a-mole." That''s the carnival game where the player strikes at a 
+ mechanical mole; it retreats and another mole pops up on the opposite side 
+ of the field. The moles pop up and down so fast that you end up flailing 
+ your mallet helplessly as the moles continue to pop up where you least 
+ expect them.
+ </p>', 'Pragmatic Unit Testing (C#)', '2012-09-15 03:55:29')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120915034738')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("products")[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2012-09-15 09:47:58) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 50ms (View: 43, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2012-09-15 09:48:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/products/4]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2012-09-15 09:48:16) [GET]
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2012-09-15 09:48:21) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 5) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/products/5/edit]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2012-09-15 12:15:54) [GET]
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 48ms (View: 35, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-15 12:16:01) [GET]
+Rendering store/index
+Completed in 72ms (View: 71, DB: 0) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-15 12:28:38) [GET]
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering store/index
+Completed in 26ms (View: 22, DB: 1) | 200 OK [http://localhost/store]

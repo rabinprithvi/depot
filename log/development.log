@@ -1732,3 +1732,153 @@ Rendered store/_cart_item (0.3ms)
 Rendered store/_cart_item (0.4ms)
 Rendered store/_cart (4.8ms)
 Completed in 20ms (View: 6, DB: 1) | 200 OK [http://localhost/store/add_to_cart/6]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2012-09-16 11:00:18) [POST]
+  Parameters: {"authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080="}
+Redirected to http://localhost:3000/store
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/store/empty_cart]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-16 11:00:18) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.6ms)
+Completed in 104ms (View: 94, DB: 1) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:07) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"4"}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (3.1ms)
+Rendered store/_cart (7.9ms)
+Completed in 35ms (View: 18, DB: 1) | 200 OK [http://localhost/store/add_to_cart/4]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2012-09-16 11:16:11) [POST]
+  Parameters: {"authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080="}
+Redirected to http://localhost:3000/store
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/store/empty_cart]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-16 11:16:11) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 32ms (View: 23, DB: 1) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:15) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"4"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (3.5ms)
+Rendered store/_cart (5.3ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/store/add_to_cart/4]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:19) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"6"}
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (3.0ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (4.9ms)
+Completed in 84ms (View: 7, DB: 1) | 200 OK [http://localhost/store/add_to_cart/6]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:23) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"4"}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (3.2ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (5.2ms)
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://localhost/store/add_to_cart/4]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:25) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"5"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 5) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (2.7ms)
+Rendered store/_cart_item (0.5ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (5.2ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/store/add_to_cart/5]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:29) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"4"}
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (3.2ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart_item (0.3ms)
+Rendered store/_cart (5.4ms)
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://localhost/store/add_to_cart/4]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:31) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"6"}
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 6) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (2.9ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart_item (0.5ms)
+Rendered store/_cart (5.6ms)
+Completed in 87ms (View: 7, DB: 1) | 200 OK [http://localhost/store/add_to_cart/6]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2012-09-16 11:16:33) [POST]
+  Parameters: {"authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080="}
+Redirected to http://localhost:3000/store
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/store/empty_cart]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-16 11:16:33) [GET]
+  [4;36;1mProduct Load (0.8ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.9ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2012-09-16 11:16:35) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"XihLkRA6AEgxs+yHhUWKac5DJLladV9Kf8LJ8qtl080=", "id"=>"4"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (2.7ms)
+Rendered store/_cart (3.8ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/store/add_to_cart/4]

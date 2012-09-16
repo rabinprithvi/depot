@@ -1,0 +1,46 @@
+#---
+# Excerpted from "Agile Web Development with Rails, 3rd Ed.",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
+#---
+
+<div class="depot-form">
+  
+  <%= error_messages_for 'order' %>
+  
+  <% form_for :order, :url => { :action => :save_order } do |form| %>
+    <fieldset>
+      <legend>Please Enter Your Details</legend>
+
+      <div>
+        <%= form.label :name, "Name:" %>
+        <%= form.text_field :name, :size => 40 %>
+      </div>
+
+      <div>
+        <%= form.label :address, "Address:" %>
+        <%= form.text_area :address, :rows => 3, :cols => 40 %>
+      </div>
+
+      <div>
+        <%= form.label :email, "E-Mail:" %>
+        <%= form.text_field :email, :size => 40 %>
+      </div>
+
+      <div>
+        <%= form.label :pay_type, "Pay with:" %>
+        <%=
+          form.select :pay_type,
+                       Order::PAYMENT_TYPES, 
+                      :prompt => "Select a payment method"
+        %>
+      </div>
+    
+      <%= submit_tag "Place Order", :class => "submit" %>
+    </fieldset>
+  <% end %>  
+</div>
+

@@ -2277,3 +2277,872 @@ Rendering template within layouts/store
 Rendering store/index
 Rendered store/_cart (1.3ms)
 Completed in 105ms (View: 14, DB: 1) | 200 OK [http://localhost/store]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20120914232736)
+Migrating to AddPriceToProduct (20120915013155)
+Migrating to AddTestData (20120915034738)
+Migrating to CreateSessions (20120915074021)
+Migrating to CreateOrders (20120916070937)
+Migrating to CreateLineItems (20120916070951)
+Migrating to CreateUsers (20120916141236)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "hashed_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120916141236')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("line_items")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2012-09-19 06:08:47) [GET]
+  [4;36;1mProduct Load (1.2ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (8.8ms)
+Completed in 142ms (View: 110, DB: 1) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-09-19 06:08:55) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 06:08:59) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-09-19 06:09:10) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 92ms (View: 82, DB: 0) | 200 OK [http://localhost/users/new]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 06:09:42) [POST]
+  Parameters: {"commit"=>"Add User", "user"=>{"password_confirmation"=>"prithvi", "name"=>"rabin", "password"=>"prithvi"}, "authenticity_token"=>"vNjCjKiBliH1ovHqX89UjB9jyvjd/s/E1daedT7FiGI="}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'rabin') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "updated_at", "hashed_password") VALUES('rabin', '700443315955600.0939390224885563', '2012-09-19 00:39:42', '2012-09-19 00:39:42', '736d6ff9c78e3016679316576eaf3b797ce9fc35')[0m
+Redirected to http://localhost:3000/users
+Completed in 189ms (DB: 1) | 302 Found [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 06:09:42) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:39:54) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 45ms (View: 32, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-09-19 15:40:05) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 15:40:17) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"thara", "name"=>"thara", "password"=>"thara"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'thara') LIMIT 1[0m
+  [4;36;1mUser Create (0.6ms)[0m   [0;1mINSERT INTO "users" ("name", "hashed_password", "created_at", "updated_at", "salt") VALUES('thara', '0e23531ab7b1cccda1958c5dfd10d2de91055f53', '2012-09-19 10:10:17', '2012-09-19 10:10:17', '699028138589800.283962853870808')[0m
+Redirected to http://localhost:3000/users
+Completed in 225ms (DB: 2) | 302 Found [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:40:18) [GET]
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 15:47:17) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"123", "name"=>"bhargav", "password"=>"123"}}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'bhargav') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "hashed_password", "created_at", "updated_at", "salt") VALUES('bhargav', 'e790552b3e6ab9712964e488d9285ffb8cab09c0', '2012-09-19 10:17:17', '2012-09-19 10:17:17', '699028131021200.0715179866973664')[0m
+Redirected to http://localhost:3000/users
+Completed in 175ms (DB: 1) | 302 Found [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:47:18) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:47:47) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:47:57) [GET]
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:48:00) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-09-19 15:48:01) [GET]
+Rendering template within layouts/users
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected ':', expecting kEND
+;  form_for(@user) :url => { :action => :show } do...
+                    ^
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected kDO, expecting kEND
+...url => { :action => :show } do |f| ; @output_buffer.concat "...
+                              ^
+/home/computer/projects/depot/app/views/users/new.html.erb:34: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"depot-form\">\n\n"
+
+;  form_for(@user) :url => { :action => :show } do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <fieldset>\n  <legend>Enter User Details</legend>\n\n  <div>\n    "
+
+
+
+
+
+; @output_buffer.concat(( f.label :name ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.text_field :name, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.label :password, 'Password' ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.password_field :password, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.label :password_confirmation, 'Confirm' ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.password_field :password_confirmation, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.submit "Add User", :class => "submit" ).to_s); @output_buffer.concat "\n  </div>\n\n  </fieldset>\n"
+
+
+
+;  end ; @output_buffer.concat "\n\n</div>\n\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/computer/projects/depot/app/views/users/new.html.erb:34:in `compile!'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/renderable.rb:61:in `compile'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/renderable.rb:28:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/template.rb:205:in `render_template'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:265:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:348:in `_render_with_layout'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:262:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1252:in `render_for_file'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `respond'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `each'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `respond'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/computer/projects/depot/app/controllers/users_controller.rb:37:in `new'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:617:in `call_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/flash.rb:151:in `perform_action'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:606:in `process'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:391:in `process'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:386:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/session/abstract_store.rb:177:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/commands/server.rb:111
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected ':', expecting kEND
+;  form_for(@user) :url => { :action => :show } do...
+                    ^
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected kDO, expecting kEND
+...url => { :action => :show } do |f| ; @output_buffer.concat "...
+                              ^
+/home/computer/projects/depot/app/views/users/new.html.erb:34: syntax error, unexpected kENSURE, expecting $end) on line #3 of app/views/users/new.html.erb:
+1: <div class="depot-form">
+2: 
+3: <% form_for(@user) :url => { :action => :show } do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <fieldset>
+
+    app/views/users/new.html.erb:34:in `compile!'
+    app/controllers/users_controller.rb:37:in `new'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.3ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-09-19 15:48:52) [GET]
+Rendering template within layouts/users
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected ':', expecting kEND
+;  form_for(@user) :url => { :action => :show_user...
+                    ^
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected kDO, expecting kEND
+...> { :action => :show_user } do |f| ; @output_buffer.concat "...
+                              ^
+/home/computer/projects/depot/app/views/users/new.html.erb:34: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"depot-form\">\n\n"
+
+;  form_for(@user) :url => { :action => :show_user } do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <fieldset>\n  <legend>Enter User Details</legend>\n\n  <div>\n    "
+
+
+
+
+
+; @output_buffer.concat(( f.label :name ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.text_field :name, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.label :password, 'Password' ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.password_field :password, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.label :password_confirmation, 'Confirm' ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.password_field :password_confirmation, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.submit "Add User", :class => "submit" ).to_s); @output_buffer.concat "\n  </div>\n\n  </fieldset>\n"
+
+
+
+;  end ; @output_buffer.concat "\n\n</div>\n\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/computer/projects/depot/app/views/users/new.html.erb:34:in `compile!'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/renderable.rb:61:in `compile'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/renderable.rb:28:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/template.rb:205:in `render_template'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:265:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:348:in `_render_with_layout'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:262:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1252:in `render_for_file'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `respond'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `each'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `respond'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/computer/projects/depot/app/controllers/users_controller.rb:37:in `new'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:617:in `call_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/flash.rb:151:in `perform_action'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:606:in `process'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:391:in `process'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:386:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/session/abstract_store.rb:177:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/commands/server.rb:111
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected ':', expecting kEND
+;  form_for(@user) :url => { :action => :show_user...
+                    ^
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected kDO, expecting kEND
+...> { :action => :show_user } do |f| ; @output_buffer.concat "...
+                              ^
+/home/computer/projects/depot/app/views/users/new.html.erb:34: syntax error, unexpected kENSURE, expecting $end) on line #3 of app/views/users/new.html.erb:
+1: <div class="depot-form">
+2: 
+3: <% form_for(@user) :url => { :action => :show_user } do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <fieldset>
+
+    app/views/users/new.html.erb:34:in `compile!'
+    app/controllers/users_controller.rb:37:in `new'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (115.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:48:59) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/users/]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-09-19 15:49:00) [GET]
+Rendering template within layouts/users
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected ':', expecting kEND
+;  form_for(@user) :url => { :action => :show_user...
+                    ^
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected kDO, expecting kEND
+...> { :action => :show_user } do |f| ; @output_buffer.concat "...
+                              ^
+/home/computer/projects/depot/app/views/users/new.html.erb:34: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"depot-form\">\n\n"
+
+;  form_for(@user) :url => { :action => :show_user } do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <fieldset>\n  <legend>Enter User Details</legend>\n\n  <div>\n    "
+
+
+
+
+
+; @output_buffer.concat(( f.label :name ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.text_field :name, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.label :password, 'Password' ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.password_field :password, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.label :password_confirmation, 'Confirm' ).to_s); @output_buffer.concat ":\n    "
+; @output_buffer.concat(( f.password_field :password_confirmation, :size => 40 ).to_s); @output_buffer.concat "\n  </div>\n\n  <div>\n    "
+
+
+
+; @output_buffer.concat(( f.submit "Add User", :class => "submit" ).to_s); @output_buffer.concat "\n  </div>\n\n  </fieldset>\n"
+
+
+
+;  end ; @output_buffer.concat "\n\n</div>\n\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/computer/projects/depot/app/views/users/new.html.erb:34:in `compile!'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/renderable.rb:61:in `compile'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/renderable.rb:28:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/template.rb:205:in `render_template'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:265:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:348:in `_render_with_layout'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_view/base.rb:262:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1252:in `render_for_file'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `respond'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `each'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `respond'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/computer/projects/depot/app/controllers/users_controller.rb:37:in `new'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:617:in `call_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/flash.rb:151:in `perform_action'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `send'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/filters.rb:606:in `process'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:391:in `process'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/base.rb:386:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/session/abstract_store.rb:177:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+/home/computer/.rvm/gems/ruby-1.8.7-p370/gems/rails-2.3.11/lib/commands/server.rb:111
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected ':', expecting kEND
+;  form_for(@user) :url => { :action => :show_user...
+                    ^
+/home/computer/projects/depot/app/views/users/new.html.erb:3: syntax error, unexpected kDO, expecting kEND
+...> { :action => :show_user } do |f| ; @output_buffer.concat "...
+                              ^
+/home/computer/projects/depot/app/views/users/new.html.erb:34: syntax error, unexpected kENSURE, expecting $end) on line #3 of app/views/users/new.html.erb:
+1: <div class="depot-form">
+2: 
+3: <% form_for(@user) :url => { :action => :show_user } do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <fieldset>
+
+    app/views/users/new.html.erb:34:in `compile!'
+    app/controllers/users_controller.rb:37:in `new'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (118.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:52:11) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/users/]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2012-09-19 15:52:18) [DELETE]
+  Parameters: {"id"=>"2", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY="}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/users
+Completed in 203ms (DB: 1) | 302 Found [http://localhost/users/2]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:52:18) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-09-19 15:52:20) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/users/new]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 15:52:31) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"meha", "name"=>"meha", "password"=>"meha"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'meha') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "hashed_password", "created_at", "updated_at", "salt") VALUES('meha', '059a26808405568726ccea94cd9dac4cd75d6708', '2012-09-19 10:22:31', '2012-09-19 10:22:31', '699028139587600.119199114365494')[0m
+Redirected to http://localhost:3000/users
+Completed in 205ms (DB: 1) | 302 Found [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 15:52:31) [GET]
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2012-09-19 15:52:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/users/3]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-09-19 16:05:51) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 80ms (View: 7, DB: 1) | 200 OK [http://localhost/users/new]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 16:05:58) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"thara", "name"=>"thara", "password"=>"thara"}}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'thara') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "hashed_password", "created_at", "updated_at", "salt") VALUES('thara', '7fc51d57530dfcacab9b71161a5e709e810bd066', '2012-09-19 10:35:58', '2012-09-19 10:35:58', '699028140541600.329300412066087')[0m
+Redirected to http://localhost:3000/users/show
+Completed in 206ms (DB: 2) | 302 Found [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2012-09-19 16:05:58) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=show):
+  app/controllers/users_controller.rb:24:in `show'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 16:10:41) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"123", "name"=>"thara", "password"=>"123"}}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'thara') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 114ms (View: 8, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 16:10:54) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"123", "name"=>"kiran", "password"=>"123"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'kiran') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "hashed_password", "created_at", "updated_at", "salt") VALUES('kiran', '02921c83d3d46e0d111bde706625d5448fb69fa8', '2012-09-19 10:40:54', '2012-09-19 10:40:54', '699028141094600.238278164241417')[0m
+Redirected to http://localhost:3000/users/show
+Completed in 194ms (DB: 1) | 302 Found [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2012-09-19 16:10:54) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=show):
+  app/controllers/users_controller.rb:24:in `show'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/computer/.rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 16:11:06) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"123", "name"=>"kiran", "password"=>"123"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'kiran') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 111ms (View: 97, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-09-19 16:11:18) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"Txd4L/UyjtmoeDZ+nXezvcQ+9wPUDJdVxVbm4snUWAY=", "user"=>{"password_confirmation"=>"123", "name"=>"arun", "password"=>"123"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'arun') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "hashed_password", "created_at", "updated_at", "salt") VALUES('arun', '0bb33c8fb4203e16d3dcd37ff88bd4566ba1df3b', '2012-09-19 10:41:18', '2012-09-19 10:41:18', '699028141981000.773921058225837')[0m
+Redirected to http://localhost:3000/users
+Completed in 212ms (DB: 1) | 302 Found [http://localhost/users]
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /home/computer/projects/depot/app/controllers/application_controller.rb:7)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2012-09-19 16:11:18) [GET]
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/users]

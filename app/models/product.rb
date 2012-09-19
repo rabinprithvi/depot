@@ -6,13 +6,21 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
 #---
-class Product < ActiveRecord::Base
 
+
+class Product < ActiveRecord::Base
+  has_many :orders, :through => :line_items
   has_many :line_items
+  # ...
+
 
   def self.find_products_for_sale
     find(:all, :order => "title")
   end
+
+  # validation stuff...
+
+
 
 
 
